@@ -1,6 +1,10 @@
-print("Aditya")
-print("Decmeber 27, 2023")
-print("I am signing up for Replit's 100 days of Python challenge!"
-"I will make sure to spend some time every day coding along, for a minimum of 10 minutes a day.")
-print("I am feeling 🥳")
-print("You can follow my progress at https://github.com/iadityasasank/PythonLearning")
+print("""
+I am Aditya Sasank
+August 8, 2024
+I am restarting my journey of Replit's 100 days of Python Challenge!
+I will make sure to spend sometime every day coding along, for a minimum of 10 minutes a day.
+I'll be using Replit, an amazing online IDE so I can do this from my Phone wherever I happen to be. 
+***NO EXCUSES***
+I am feeling 😤
+""")
+print("You can follow my progress at replit.com/@AdithyaSasank")
