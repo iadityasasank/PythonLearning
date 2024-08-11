@@ -3,10 +3,10 @@ from getpass import getpass as input
 print("E P I C    🪨  📄 ✂️    B A T T L E ")
 print()
 
-P1_S = 0  # Initialize P1_S and P2_S outside the loop
+P1_S = 0
 P2_S = 0
 
-while P1_S < 3 and P2_S < 3:
+while True:
   print("Select your move (R, P or S)")
   print()
 
@@ -26,6 +26,7 @@ while P1_S < 3 and P2_S < 3:
       P2_S += 1
     else:
       print("Invalid Move Player 2!")
+
   elif player1Move == "p":
     if player2Move == "r":
       print("Player2's Rock is smothered by Player1's Paper!")
@@ -37,6 +38,7 @@ while P1_S < 3 and P2_S < 3:
       print("Two bits of paper flap at each other. Dissapointing. Draw.")
     else:
       print("Invalid Move Player 2!")
+
   elif player1Move == "s":
     if player2Move == "r":
       print("Player 2's Rock makes metal-dust out of Player1's Scissors")
@@ -48,12 +50,16 @@ while P1_S < 3 and P2_S < 3:
       P1_S += 1
     else:
       print("Invalid Move Player 2!")
+
   else:
     print("Invalid Move Player 1!")
 
-if P1_S > P2_S:
-  print()
-  print("Player 1 wins with", P1_S, "points")
-else:
-  print()
-  print("Player 2 wins with", P2_S, "points")
+  # Check for win conditions after all other logic
+  if P1_S >= 3:
+    print("Player 1 wins with", P1_S, "points")
+    break
+  elif P2_S >= 3:
+    print("Player 2 wins with", P2_S, "points")
+    break
+  else: 
+    continue # Skip to the next round if neither player won
