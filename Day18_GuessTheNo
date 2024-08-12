@@ -1,0 +1,41 @@
+print("Guess the Number Game!")
+print("**********************\n")
+print("I am thinking of a number between 1 and 1,000,000.")
+crt_num=999
+count=0
+won=0
+while True:
+  guess_num=int(input("Let's see if you can guess the number I am thinking of. What is your guess?: "))
+  if guess_num==crt_num-1 or guess_num==crt_num+1:
+    print("You are too close!")
+    count=+1
+    exit=input("Do you want to try again?(Y/N): ").lower()
+    if exit.upper() == 'Y':
+      continue
+    else:
+      break
+  elif guess_num<crt_num:
+    print("Too low!")
+    count=+1
+    exit=input("Do you want to try again?(Y/N): ").lower()
+    if exit.upper() == 'Y':
+      continue
+    else:
+      break
+  elif guess_num>crt_num:
+    print("Too high!")
+    count=+1
+    exit=input("Do you want to try again?(Y/N): ").lower()
+    if exit.upper() == 'Y':
+      continue
+    else:
+      break
+  else:
+    print("You got it!")
+    won=1
+    count=+1
+    break
+if won==1:
+  print("You guessed the number in ".count,"attempts!")
+else:
+  print("Better Luck next time!!")
