@@ -1,7 +1,7 @@
 print("100 Days of Code QUIZ")
 print()
 print("Let's see how many can you answer correctly!")
-ans1 = input("What language are we writing in?")
+ans1 = input("What language are we writing in?").lower()
 if ans1 == "python":
   print("Correct")
 else:
